@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
+import TaskDetails from "./components/TaskDetails";
 
 import "./App.css";
 
@@ -51,17 +52,27 @@ const App = () => {
     <Router>
       <div className="container">
         <Header />
-        <Route path="/" exact render={() => { 
-            return(
-              <>
-                <AddTask handleTaskAddition={handleTaskAddition} /> 
-                <Tasks 
-                tasks={tasks} 
-                handleTaskClick={handleTaskClick} 
-                handleTaskDeletion={handleTaskDeletion}/>
-              </>
-          )
-        }} />
+        <Route 
+          path="/" 
+          exact 
+          render={() => { 
+              return(
+                <>
+                  <AddTask handleTaskAddition={handleTaskAddition} /> 
+                  <Tasks 
+                  tasks={tasks} 
+                  handleTaskClick={handleTaskClick} 
+                  handleTaskDeletion={handleTaskDeletion}/>
+                </>
+            )
+          }} 
+        />
+
+        <Route 
+          path=""
+          exact 
+          component={TaskDetails}
+          />
       </div>
     </Router>
   );
