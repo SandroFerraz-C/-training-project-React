@@ -68,8 +68,8 @@ const App = () => {
           }} 
         />
 
-        <Route 
-          path=""
+<Route 
+          path="/:taskTitle"
           exact 
           component={TaskDetails}
           />
