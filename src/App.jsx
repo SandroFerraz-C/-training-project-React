@@ -12,16 +12,7 @@ import "./App.css";
 
 const App = () => {
   let [tasks, setTasks] = useState([
-    {
-      id: "1",
-      title: "Estudar Logica de Programação",
-      completed: true,
-    },
-    {
-      id: "2",
-      title: "Estudar React",
-      completed: false,
-    },
+    
   ]);
 
   useEffect(() =>{
